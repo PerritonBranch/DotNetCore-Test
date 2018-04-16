@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Nuget.CommandLine" Version="4.6.2" />
   </ItemGroup>
 
 </Project>
