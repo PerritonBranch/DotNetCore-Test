@@ -14,7 +14,7 @@ namespace XUnitTestProject
         [Fact]
         public void Test2()
         {
-            Assert.True(false);
+            Assert.True(true);
         }
     }
 }
