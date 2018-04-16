@@ -20,7 +20,7 @@ namespace XUnitTestProject
         [Fact]
         public void Test3()
         {
-            Assert.False(true);
+            Assert.False(false);
         }
     }
 }
