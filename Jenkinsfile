@@ -1,7 +1,7 @@
 pipeline {
   agent {
     dockerfile {
-      filename 'jenkins-dotnet-slave'
+      filename 'DotNetDockerfile'
     }
 
   }
