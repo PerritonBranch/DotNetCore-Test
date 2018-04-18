@@ -11,7 +11,7 @@ pipeline {
     }
     stage('DockerBuild') {
       steps {
-        sh 'docker-compose build '
+        sh 'docker run hello-world'
       }
     }
   }
