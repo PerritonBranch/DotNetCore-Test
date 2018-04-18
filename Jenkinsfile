@@ -4,8 +4,8 @@ pipeline {
     stage('BuildAndTest') {
       steps {
         sh 'docker --version'
-        sh 'docker run hello-world'
         sh 'whoami'
+        sh 'docker run hello-world'
         sh 'cat /etc/*-release'
         sh 'dotnet restore Builder.sln'
         sh 'dotnet build Builder.sln'
