@@ -9,5 +9,10 @@ pipeline {
         sh 'dotnet test Builder.sln'
       }
     }
+    stage('DockerBuild') {
+      steps {
+        sh 'docker-compose build '
+      }
+    }
   }
 }
