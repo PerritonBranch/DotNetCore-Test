@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'docker --version'
         sh 'whoami'
+        sh 'groups jenkins'
         sh 'docker run hello-world'
         sh 'cat /etc/*-release'
         sh 'dotnet restore Builder.sln'
