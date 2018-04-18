@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'jenkins-dotnet-slave'
+    }
+
+  }
   stages {
     stage('BuildAndTest') {
       steps {
