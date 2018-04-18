@@ -6,7 +6,7 @@ FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY *.sln ./
 COPY TestWebApplication/TestWebApplication.csproj TestWebApplication/
-RUN dotnet restore
+RUN dotnet restore TestWebApplication.sln
 COPY . .
 WORKDIR /src/TestWebApplication
 RUN dotnet build -c Release -o /app
