@@ -3,7 +3,7 @@ pipeline {
     docker {
       args '''-p 3000:3000
 '''
-      image 'microsoft/dotnet:2.0-runtime'
+      image 'microsoft/dotnet:2.0-sdk'
     }
 
   }
