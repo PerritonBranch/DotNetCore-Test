@@ -18,8 +18,8 @@ apk add docker'''
     }
     stage('TestDockerCommands') {
       steps {
-        sh 'docker ps'
         sh 'docker --version'
+        sh 'docker ps'
         sh 'docker run hello-world'
       }
     }
