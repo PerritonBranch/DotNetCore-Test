@@ -9,6 +9,8 @@ pipeline {
   stages {
     stage('TestDockerCommands') {
       steps {
+        sh 'cat /etc/*-release'
+        sh 'whoami'
         sh 'docker ps'
         sh 'docker --version'
         sh 'docker run hello world'
