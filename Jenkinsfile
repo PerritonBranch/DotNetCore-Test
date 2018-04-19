@@ -40,8 +40,8 @@ yes | apt-get install docker-ce'''
       steps {
         sh 'dotnet --version'
         sh 'dotnet restore Builder.sln'
-        sh 'dotnet test Builder.sln'
         sh 'dotnet build Builder.sln'
+        sh 'dotnet test Builder.sln'
       }
     }
   }
