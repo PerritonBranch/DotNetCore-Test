@@ -13,7 +13,7 @@ pipeline {
         sh 'cat /etc/*-release'
         sh 'whoami'
         sh '''apt-get update
-apt-get install \\
+yes | apt-get install \\
      apt-transport-https \\
      ca-certificates \\
      curl \\
