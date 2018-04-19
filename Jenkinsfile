@@ -4,6 +4,7 @@ pipeline {
       args '''-p 3000:3000
 '''
       image 'microsoft/dotnet:2.0-sdk'
+
     }
 
   }
@@ -27,10 +28,6 @@ add-apt-repository \\
    stable"
 apt-get update
 yes | apt-get install docker-ce'''
-      }
-    }
-    stage('TestDockerCommands') {
-      steps {
         sh 'docker --version'
         sh 'docker ps'
         sh 'docker run hello-world'
