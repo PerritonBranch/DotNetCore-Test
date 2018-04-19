@@ -12,8 +12,6 @@ pipeline {
       steps {
         sh 'cat /etc/*-release'
         sh 'whoami'
-        sh '''apk update
-apk add docker'''
       }
     }
     stage('TestDockerCommands') {
