@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('TestDockerCommands') {
       steps {
+        sh 'docker ps'
         sh 'docker --version'
         sh 'docker run hello world'
       }
