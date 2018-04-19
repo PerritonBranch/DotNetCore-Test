@@ -12,6 +12,8 @@ pipeline {
       steps {
         sh 'cat /etc/*-release'
         sh 'whoami'
+        sh '''apt-get update
+apt-get install docker-ce'''
       }
     }
     stage('TestDockerCommands') {
