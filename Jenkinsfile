@@ -42,6 +42,9 @@ yes | apt-get install docker-ce'''
       }
     }
     stage('DockerBuild') {
+      when {
+        branch 'master'
+      }
       steps {
         sh 'docker-compose build'
         sh 'echo "Push to docker hub"'
