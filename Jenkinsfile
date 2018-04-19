@@ -27,21 +27,21 @@ add-apt-repository \\
    stable"
 apt-get update
 yes | apt-get install docker-ce'''
-      }
-    }
-    stage('TestDockerCommands') {
-      steps {
         sh 'docker --version'
         sh 'docker ps'
-        sh 'docker run hello-world'
       }
     }
-    stage('TestDotNetCore') {
+    stage('DotNetCore') {
       steps {
         sh 'dotnet --version'
         sh 'dotnet restore Builder.sln'
         sh 'dotnet build Builder.sln'
         sh 'dotnet test Builder.sln'
+      }
+    }
+    stage('Docker') {
+      steps {
+        sh 'docker-compose build'
       }
     }
   }
