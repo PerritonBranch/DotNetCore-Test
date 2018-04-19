@@ -12,6 +12,8 @@ pipeline {
       steps {
         sh 'cat /etc/*-release'
         sh 'whoami'
+        sh '''apk update
+apk add docker'''
         sh 'docker ps'
         sh 'docker --version'
         sh 'docker run hello world'
