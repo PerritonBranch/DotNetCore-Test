@@ -40,6 +40,8 @@ yes | apt-get install docker-ce'''
       steps {
         sh 'dotnet --version'
         sh 'dotnet restore TestWebApplication.sln'
+        sh 'dotnet test TestWebApplication.sln'
+        sh 'dotnet build TestWebApplication.sln'
       }
     }
   }
