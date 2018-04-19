@@ -41,12 +41,10 @@ yes | apt-get install docker-ce'''
         sh 'dotnet test Builder.sln'
       }
     }
-    if (env.BRANCH_NAME == 'master') {    
-      stage('DockerBuild') {
-        steps {
-          sh 'docker-compose build'
-          sh 'echo "Push to docker hub"'
-        }
+    stage('DockerBuild') {
+      steps {
+        sh 'docker-compose build'
+        sh 'echo "Push to docker hub"'
       }
     }
   }
