@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'DotNetDockerfile'
+    docker {
+      image 'microsoft/dotnet'
+      args '-p 3000:3000'
     }
 
   }
