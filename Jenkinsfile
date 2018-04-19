@@ -39,7 +39,6 @@ yes | apt-get install docker-ce'''
     stage('TestDotNetCore') {
       steps {
         sh 'dotnet --version'
-        sh 'dotnet restore Builder.sln'
         sh 'dotnet restore TestWebApplication.sln'
       }
     }
