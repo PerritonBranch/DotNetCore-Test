@@ -4,7 +4,6 @@ pipeline {
       args '''-p 3000:3000
 '''
       image 'microsoft/dotnet:2.0-sdk'
-
     }
 
   }
@@ -39,6 +38,12 @@ yes | apt-get install docker-ce'''
         sh 'dotnet restore Builder.sln'
         sh 'dotnet build Builder.sln'
         sh 'dotnet test Builder.sln'
+      }
+    }
+    stage('DockerBuild') {
+      steps {
+        sh 'docker-compose build'
+        sh 'echo "Push to docker hub"'
       }
     }
   }
