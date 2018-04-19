@@ -16,7 +16,7 @@ pipeline {
 apk add docker'''
         sh 'docker ps'
         sh 'docker --version'
-        sh 'docker run hello world'
+        sh 'docker run hello-world'
       }
     }
   }
