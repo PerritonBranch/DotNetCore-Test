@@ -28,5 +28,11 @@ namespace XUnitTestProject
         {
             Assert.Equal(1, 1);
         }
+
+        [Fact]
+        public void TestPullRequest5()
+        {
+            Assert.Equal(1, 1);
+        }
     }
 }
