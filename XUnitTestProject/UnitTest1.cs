@@ -6,24 +6,6 @@ namespace XUnitTestProject
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
-        {
-            Assert.True(true);
-        }
-
-        [Fact]
-        public void Test2()
-        {
-            Assert.True(true);
-        }
-
-        [Fact]
-        public void Test3()
-        {
-            Assert.False(false);
-        }
-
-        [Fact]
         public void TestPullRequest()
         {
             Assert.Equal(1,1);
@@ -39,6 +21,12 @@ namespace XUnitTestProject
         public void TestPullRequest3()
         {
             Assert.Equal(1, 1);
+        }
+
+        [Fact]
+        public void TestPullRequest4()
+        {
+            Assert.Equal(1, 0);
         }
     }
 }
